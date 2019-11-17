@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="upofly.list">
+      <field name="name">upofly list</field>
+      <field name="model">upofly.upofly</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="upofly.action_window">
+      <field name="name">upofly window</field>
+      <field name="res_model">upofly.upofly</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="upofly.action_server">
+      <field name="name">upofly server</field>
+      <field name="model_id" ref="model_upofly_upofly"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="upofly" id="upofly.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="upofly.menu_1" parent="upofly.menu_root"/>
+    <menuitem name="Menu 2" id="upofly.menu_2" parent="upofly.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="upofly.menu_1_list" parent="upofly.menu_1"
+              action="upofly.action_window"/>
+    <menuitem name="Server to list" id="upofly" parent="upofly.menu_2"
+              action="upofly.action_server"/>
+    -->
+  </data>
+</odoo>

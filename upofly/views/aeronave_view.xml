@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="act_aeronave" model="ir.actions.act_window">
+			<field name="name">Aeronaves</field>
+			<field name="res_model">aeronave</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">form</field>
+		</record>
+		<menuitem id="upofly" name="Upofly" action="act_aeronave"></menuitem>
+		<menuitem name="Aeronaves" id="upofly_submenu" parent="upofly" sequence="100"></menuitem>
+	</data>
+</odoo>

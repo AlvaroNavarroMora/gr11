@@ -2,14 +2,9 @@
 
 from odoo import models, fields, api
 
-# class upofly(models.Model):
-#     _name = 'upofly.upofly'
-
-#     name = fields.Char()
-#     value = fields.Integer()
-#     value2 = fields.Float(compute="_value_pc", store=True)
-#     description = fields.Text()
-#
-#     @api.depends('value')
-#     def _value_pc(self):
-#         self.value2 = float(self.value) / 100
+class Cliente(models.Model):
+    _name = 'upofly.cliente'
+    _inherits = {'res.partner' : 'partner_id'}
+    partner_id = fields.Many2one('res.partner', ondelete='cascade'
+                                 )
+    identificacion = fields.Char('DNI/CIF', size=9)

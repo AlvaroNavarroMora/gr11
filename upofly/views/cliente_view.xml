@@ -1,0 +1,22 @@
+<odoo>
+  <data>
+    <record model='ir.ui.view' id='cliente_res_partner'>
+        <field name='name'>cliente_res_partner_inherit</field>
+        <field name='model'>upofly.cliente</field>
+        <field name='inherit_id' ref='base.view_partner_form'/>
+        <field name='arch' type='xml'>
+			<field name="name" position="after">
+                <field name="identificacion" />
+            </field>
+		</field>
+    </record>
+    <record id="act_clientes" model="ir.actions.act_window">
+		<field name="name">Gestión de Clientes</field>
+		<field name="res_model">upofly.cliente</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<menuitem id="upofly" name="UPOFly" action="act_clientes" />
+	<menuitem name="Clientes" id="clientes_submenu" parent="upofly" sequence="100" />
+	<menuitem name="Ver clientes" id="clientes_submenu_2" parent="clientes_submenu" sequence="100" action="act_clientes" />
+  </data>
+</odoo>

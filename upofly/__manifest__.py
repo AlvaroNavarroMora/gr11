@@ -8,12 +8,6 @@
     'category': 'UPOFly',
     'version': '0.1',
     'depends': ['base'],
-<<<<<<< HEAD
-    'data': ['views/aeronave_view.xml', 'views/parteMantenimiento_view.xml', 'views/ruta_view.xml'],
-    'demo': [],
-=======
-    'data': ['views/cliente_view.xml','views/piloto_view.xml'],
-    'demo': [ ],
->>>>>>> refs/heads/marcos
+    'data': ['views/aeronave_view.xml', 'views/parteMantenimiento_view.xml', 'views/ruta_view.xml','views/cliente_view.xml','views/piloto_view.xml'],
     'aplication': True,
 }

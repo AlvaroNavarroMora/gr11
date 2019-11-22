@@ -8,7 +8,7 @@
     'category': 'UPOFly',
     'version': '0.1',
     'depends': ['base'],
-    'data': ['views/aeronave_view.xml', 'views/parteMantenimiento_view.xml'],
+    'data': ['views/aeronave_view.xml', 'views/parteMantenimiento_view.xml', 'views/ruta_view.xml'],
     'demo': [],
     'aplication': True,
 }

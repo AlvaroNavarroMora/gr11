@@ -11,6 +11,7 @@
 						<field name="capacidad" />
 						<field name="suplemento" />
 						<field name="matricula" />
+						<field name="parte_mantenimiento_ids" />
 					</group>
 				</form>
 			</field>
@@ -27,6 +28,7 @@
 						<field name="capacidad" />
 						<field name="suplemento" />
 						<field name="matricula" />
+						<field name="parte_mantenimiento_ids" />
 					</group>
 				</form>
 			</field>

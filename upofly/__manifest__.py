@@ -8,7 +8,7 @@
     'category': 'UPOFly',
     'version': '0.1',
     'depends': ['base'],
-    'data': ['views/cliente_view.xml'],
+    'data': ['views/cliente_view.xml','views/piloto_view.xml'],
     'demo': [ ],
     'aplication': True,
 }

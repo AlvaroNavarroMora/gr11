@@ -35,7 +35,7 @@
 	    <record id="act_clientes" model="ir.actions.act_window">
 			<field name="name">Gestión de Clientes</field>
 			<field name="res_model">upofly.cliente</field>
-			<field name="view_mode">tree,kanban,form</field>
+			<field name="view_mode">tree,form</field>
 			<field name="search_view_id" ref="clientes_view_search"/>
 		</record>
 		<menuitem id="upofly" name="UPOFly" action="act_clientes" />

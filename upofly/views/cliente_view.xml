@@ -7,6 +7,7 @@
  				<search string="Buscar">
  					<filter name='es_particular' string="Particulares" domain="[('is_company','=',False)]" />
  					<filter name='es_empresa' string="Empresas" domain="[('is_company','=',True)]" />
+ 					<field name="name" string="Cliente" filter_domain="['|',('name','ilike',self),('identificacion','ilike',self)]"/>
  				</search>
  			</field>
  		</record>
@@ -20,6 +21,17 @@
 	            </field>
 			</field>
 	    </record>
+	    <record model="ir.ui.view" id=" cliente_tree_view">
+			<field name="name">view_upofly_cliente_tree</field>
+			<field name="model">upofly.cliente</field>
+			<field name="arch" type="xml">
+				<tree string="tree_string">
+					<field name="name" />
+					<field name="identificacion" />
+					<field name="phone" />
+				</tree>
+			</field>
+		</record>
 	    <record id="act_clientes" model="ir.actions.act_window">
 			<field name="name">Gestión de Clientes</field>
 			<field name="res_model">upofly.cliente</field>

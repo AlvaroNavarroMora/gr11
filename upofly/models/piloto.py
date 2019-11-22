@@ -2,10 +2,10 @@
 
 from odoo import models, fields, api
 
-class Pliente(models.Model):
+class Piloto(models.Model):
     _name = 'upofly.piloto'
     _inherits = {'res.partner' : 'partner_id'}
-    #partner_id = fields.Many2one('res.partner', ondelete='cascade')
-    name = fields.Char('Nombre', required=True)
+    partner_id = fields.Many2one('res.partner', ondelete='cascade')
+    nombre = fields.Char('Nombre', required=True)
     dni = fields.Char('DNI', size=9, required=True)
     num_licencia = fields.Char('Licencia Nº', required=True)

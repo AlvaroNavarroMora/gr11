@@ -13,13 +13,6 @@
 	        <field name='name'>piloto_res_partner_inherit</field>
 	        <field name='model'>upofly.piloto</field>
 	        <field name='inherit_id' ref='base.view_partner_form'/>
-	        <field name='arch' type='xml'>
-				<field name="name" position="after">
-	                <field name="dni" />
-	                <field name="num_licencia" />
-	                <field name="customer" position="replace"/>
-	            </field>
-			</field>
 	    </record>
 	    <record model="ir.ui.view" id=" piloto_tree_view">
 			<field name="name">view_upofly_piloto_tree</field>

@@ -6,7 +6,7 @@
 			<field name="model">upofly.parte_mantenimiento</field>
 			<field name="arch" type="xml">
 				<form string="Form de parte de Mantenimiento">
-					<group string="PartesDeMantenimiento">
+					<group string="Partes de mantenimiento">
 						<field name="aeronave_id" />
 						<field name="fecha" />
 						<field name="descripcion" />

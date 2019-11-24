@@ -6,3 +6,4 @@ from . import parteMantenimiento
 from . import ruta
 from . import cliente
 from . import piloto
+from . import factura

@@ -2,7 +2,7 @@
 
 from odoo import models, fields, api
 
-class Piloto(models.Model):
+class piloto(models.Model):
     _name = 'upofly.piloto'
     nombre = fields.Char('Nombre', size=60, required=True)
     dni = fields.Char('DNI', size=9, required=True)

@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 	<data>
+		<record id="parte_mantenimiento_view_search" model="ir.ui.view">
+			<field name="name">upofly.parte_mantenimiento.search</field>
+			<field name="model">upofly.parte_mantenimiento</field>
+			<field name="arch" type="xml">
+				<search string="Buscar">
+					<filter name='en_espera' string="En espera"
+						domain="[('estado','=','espera')]" />
+					<filter name='en_reparacion' string="En reparación"
+						domain="[('estado','=','reparacion')]" />
+					<filter name='reparado' string="Reparado"
+						domain="[('estado','=','reparado')]" />
+					<field name="aeronave_id" string="Aeronave"
+						filter_domain="[('aeronave_id','ilike',self)]" />
+					<group expand="0" string="Agrupar Por">
+						<filter name="group_by_aeronave_id" string="Aeronave" context="{'group_by':'aeronave_id'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
 		<record model="ir.ui.view"
 			id="view_upofly_parteMantenimiento_form">
 			<field name="name">view_upofly_parteMantenimiento_form</field>
@@ -34,14 +53,16 @@
 			</field>
 		</record>
 
-		<record model="ir.ui.view" id="upofly_parteMantenimiento_calendar">
+		<record model="ir.ui.view"
+			id="upofly_parteMantenimiento_calendar">
 			<field name="name">upofly_parteMantenimiento_calendar</field>
 			<field name="model">upofly.parte_mantenimiento</field>
 			<field name="type">calendar</field>
 			<field name="arch" type="xml">
-				<calendar string="Partes de Matenimiento" date_start="fecha"
-					date_delay="tiempoEstimado" mode="month" color="aeronave_id">
-					<field name="estado"/>
+				<calendar string="Partes de Matenimiento"
+					date_start="fecha" date_delay="tiempoEstimado" mode="month"
+					color="aeronave_id">
+					<field name="estado" />
 				</calendar>
 			</field>
 		</record>

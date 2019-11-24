@@ -1,27 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 	<data>
-		<record id="upofly_ruta_form" model="ir.ui.view">
-			<field name="name">Ruta</field>
-			<field name="model">upofly.ruta</field>
-			<field name="arch" type="xml">
-				<form string="form_ruta">
-					<group string="rutas">
-						<field name="nombre" />
-						<field name="descripcion" />
-						<field name="lista_coordenadas" />
-					</group>
-				</form>
-			</field>
-		</record>
-
 		<record id="view_upofly_ruta_form" model="ir.ui.view">
 			<field name="name">view_upofly_ruta_form</field>
 			<field name="model">upofly.ruta</field>
 			<field name="type">form</field>
 			<field name="arch" type="xml">
-				<form string="form_ruta">
-					<group string="rutas">
+				<form>
+					<group string="Ruta">
 						<field name="nombre" />
 						<field name="descripcion" />
 						<field name="lista_coordenadas" />
@@ -49,7 +35,11 @@
 			<field name="view_mode">tree,form</field>
 		</record>
 
+<<<<<<< HEAD
 		<menuitem id="vuelo_submenu" parent="upofly" name="Vuelo"
+=======
+		<menuitem id="vuelo_submenu" parent="upofly" name="Vuelos"
+>>>>>>> branch 'master' of https://github.com/markendos/gr11.git
 			sequence="100" />
 		<menuitem id="ruta_submenu" parent="vuelo_submenu"
 			name="Rutas" action="act_ruta" sequence="110" />

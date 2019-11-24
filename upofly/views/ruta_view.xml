@@ -35,12 +35,7 @@
 			<field name="view_mode">tree,form</field>
 		</record>
 
-<<<<<<< HEAD
-		<menuitem id="vuelo_submenu" parent="upofly" name="Vuelo"
-=======
-		<menuitem id="vuelo_submenu" parent="upofly" name="Vuelos"
->>>>>>> branch 'master' of https://github.com/markendos/gr11.git
-			sequence="100" />
+		<menuitem id="vuelo_submenu" parent="upofly" name="Vuelo" sequence="100" />
 		<menuitem id="ruta_submenu" parent="vuelo_submenu"
 			name="Rutas" action="act_ruta" sequence="110" />
 	</data>

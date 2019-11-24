@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="upofly_vuelo_form">
+			<field name="name">Vuelo</field>
+			<field name="model">upofly.vuelo</field>
+			<field name="arch" type="xml">
+				<form string="Form de Vuelo">
+					<group string="Vuelos">
+						<field name="fecha" />
+						<field name="aeronave_id" />
+						<field name="ruta_id" />
+						<field name="piloto_id" />
+					</group>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_upofly_vuelo_form">
+			<field name="name">view_upofly_vuelo_form</field>
+			<field name="model">upofly.vuelo</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Vuelos">
+					<group string="Vuelos">
+						<field name="fecha" />
+						<field name="aeronave_id" />
+						<field name="ruta_id" />
+						<field name="piloto_id" />
+					</group>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="upofly_vuelo_tree_view">
+			<field name="name">upofly_vuelo_tree_view</field>
+			<field name="model">upofly.vuelo</field>
+			<field name="arch" type="xml">
+				<tree string="tree_string">
+					<field name="fecha" />
+					<field name="aeronave_id" />
+					<field name="ruta_id" />
+					<field name="piloto_id" />
+				</tree>
+			</field>
+		</record>
+
+
+		<record id="act_vuelos" model="ir.actions.act_window">
+			<field name="name">Vuelos</field>
+			<field name="res_model">upofly.vuelo</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		
+		<menuitem id="vuelo_submenu_2" parent="vuelo_submenu"
+			name="Vuelos" action="act_vuelos" sequence="120" />
+	</data>
+</odoo>

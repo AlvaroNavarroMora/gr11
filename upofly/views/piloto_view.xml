@@ -1,0 +1,36 @@
+<odoo>
+ 	<data>
+ 		<record id="pilotos_view_search" model="ir.ui.view">
+ 			<field name="name">upofly.piloto.search</field>
+ 			<field name="model">upofly.piloto</field>
+ 			<field name="arch" type="xml">
+ 				<search string="Buscar">
+ 					<field name="name" string="Piloto" filter_domain="['|',('name','ilike',self),('dni','ilike',self),,('num_licencia','ilike',self)]"/>
+ 				</search>
+ 			</field>
+ 		</record>
+    	<record model='ir.ui.view' id='piloto_res_partner'>
+	        <field name='name'>piloto_res_partner_inherit</field>
+	        <field name='model'>upofly.piloto</field>
+	        <field name='inherit_id' ref='base.view_partner_form'/>
+	    </record>
+	    <record model="ir.ui.view" id=" piloto_tree_view">
+			<field name="name">view_upofly_piloto_tree</field>
+			<field name="model">upofly.piloto</field>
+			<field name="arch" type="xml">
+				<tree string="tree_string">
+					<field name="name" />
+					<field name="dni" />
+					<field name="num_licencia" />
+				</tree>
+			</field>
+		</record>
+	    <record id="act_pilotos" model="ir.actions.act_window">
+			<field name="name">Gestión de Pilotos</field>
+			<field name="res_model">upofly.piloto</field>
+			<field name="view_mode">tree,form</field>
+			<field name="search_view_id" ref="pilotos_view_search"/>
+		</record>
+		<menuitem name="Pilotos" id="pilotos_submenu" parent="upofly" sequence="101" action="act_pilotos" />
+ 	</data>
+</odoo>

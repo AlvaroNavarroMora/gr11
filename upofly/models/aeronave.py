@@ -4,6 +4,7 @@ from odoo import models, fields, api
 
 class aeronave(models.Model):
     _name = 'upofly.aeronave'
+    _rec_name = 'matricula'
     
     modelo = fields.Char('Nombre modelo', size=64, required=True)
     capacidad = fields.Integer("Capacidad", required=True)

@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 	<data>
-		<record model="ir.ui.view" id="upofly_parteMantenimiento_form">
-			<field name="name">Parte Mantenimiento</field>
-			<field name="model">upofly.parte_mantenimiento</field>
-			<field name="arch" type="xml">
-				<form string="Form de parte de Mantenimiento">
-					<group string="Partes de mantenimiento">
-						<field name="aeronave_id" />
-						<field name="fecha" />
-						<field name="descripcion" />
-						<field name="estado" />
-						<field name="tiempoEstimado" />
-					</group>
-				</form>
-			</field>
-		</record>
-
 		<record model="ir.ui.view"
 			id="view_upofly_parteMantenimiento_form">
 			<field name="name">view_upofly_parteMantenimiento_form</field>
@@ -49,8 +33,6 @@
 				</tree>
 			</field>
 		</record>
-
-
 
 		<record model="ir.ui.view" id="upofly_parteMantenimiento_calendar">
 			<field name="name">upofly_parteMantenimiento_calendar</field>

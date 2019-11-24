@@ -1,36 +1,88 @@
 <odoo>
- 	<data>
- 		<record id="pilotos_view_search" model="ir.ui.view">
- 			<field name="name">upofly.piloto.search</field>
- 			<field name="model">upofly.piloto</field>
- 			<field name="arch" type="xml">
- 				<search string="Buscar">
- 					<field name="name" string="Piloto" filter_domain="['|',('name','ilike',self),('dni','ilike',self),,('num_licencia','ilike',self)]"/>
- 				</search>
- 			</field>
- 		</record>
-    	<record model='ir.ui.view' id='piloto_res_partner'>
-	        <field name='name'>piloto_res_partner_inherit</field>
-	        <field name='model'>upofly.piloto</field>
-	        <field name='inherit_id' ref='base.view_partner_form'/>
-	    </record>
-	    <record model="ir.ui.view" id=" piloto_tree_view">
-			<field name="name">view_upofly_piloto_tree</field>
+	<data>
+		<record id="pilotos_view_search" model="ir.ui.view">
+			<field name="name">upofly.piloto.search</field>
+			<field name="model">upofly.piloto</field>
+			<field name="arch" type="xml">
+				<search string="Buscar">
+					<field name="nombre" string="Piloto" filter_domain="[('nombre','ilike',self)]" />
+					<field name="dni"/>
+					<field name="num_licencia"/>
+				</search>
+			</field>
+		</record>
+		<record model='ir.ui.view' id='piloto_form_view'>
+			<field name='name'>piloto_form_view</field>
+			<field name='model'>upofly.piloto</field>
+			<field name='type'>form</field>
+			<field name='arch' type='xml'>
+				<form>
+					<group string="Piloto" colspan="4" col="4">
+						<group colspan="2" col="2">
+							<field name='nombre' />
+							<field name='dni' />
+							<field name='num_licencia' />
+						</group>
+						<group colspan="2" col="2">
+							<field name='imagen' nolabel='1' widget='image'
+								class='oe_avatar' />
+						</group>
+					</group>
+				</form>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="piloto_tree_view">
+			<field name="name">piloto_tree_view</field>
 			<field name="model">upofly.piloto</field>
 			<field name="arch" type="xml">
 				<tree string="tree_string">
-					<field name="name" />
+					<field name="nombre" />
 					<field name="dni" />
 					<field name="num_licencia" />
 				</tree>
 			</field>
 		</record>
-	    <record id="act_pilotos" model="ir.actions.act_window">
+		<record model="ir.ui.view" id="piloto_kanban_view">
+			<field name='name'>piloto_kanban_view</field>
+			<field name="model">upofly.piloto</field>
+			<field name="type">kanban</field>
+			<field name="arch" type="xml">
+				<kanban>
+					<field name='id' />
+					<field name="nombre" />
+					<field name="dni" />
+					<field name="num_licencia" />
+					<field name="imagen" />
+					<templates>
+						<t t-name="kanban-box">
+							<div class="oe_kanban_global_click">
+								<div class="o kanban_image">
+									<img width="60%" t-att-src="kanban_image('upofly.piloto','imagen', record.id.value)" />
+									<div class="oe_kanban_details">
+										<h4>
+											<a type="open">
+												<field name="nombre" />
+											</a>
+										</h4>
+										<strong><field name="dni" /></strong><br/>
+										<strong><field name="num_licencia" /></strong>
+									</div>
+								</div>
+							</div>
+						</t>
+					</templates>
+				</kanban>
+			</field>
+		</record>
+		<record id="act_pilotos" model="ir.actions.act_window">
 			<field name="name">Gestión de Pilotos</field>
 			<field name="res_model">upofly.piloto</field>
-			<field name="view_mode">tree,form</field>
-			<field name="search_view_id" ref="pilotos_view_search"/>
+			<field name="view_mode">tree,form,kanban</field>
+			<field name="search_view_id" ref="pilotos_view_search" />
 		</record>
-		<menuitem name="Pilotos" id="pilotos_submenu" parent="upofly" sequence="101" action="act_pilotos" />
- 	</data>
+		<menuitem name="Pilotos" id="pilotos_submenu" parent="upofly"
+			sequence="101" action="act_pilotos" />
+		<menuitem name="Ver Pilotos" id="pilotos_submenu_2"
+			parent="pilotos_submenu" sequence="100" action="act_pilotos" />
+	</data>
 </odoo>

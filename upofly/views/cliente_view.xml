@@ -1,27 +1,30 @@
 <odoo>
- 	<data>
- 		<record id="clientes_view_search" model="ir.ui.view">
- 			<field name="name">upofly.cliente.search</field>
- 			<field name="model">upofly.cliente</field>
- 			<field name="arch" type="xml">
- 				<search string="Buscar">
- 					<filter name='es_particular' string="Particulares" domain="[('is_company','=',False)]" />
- 					<filter name='es_empresa' string="Empresas" domain="[('is_company','=',True)]" />
- 					<field name="name" string="Cliente" filter_domain="['|',('name','ilike',self),('identificacion','ilike',self)]"/>
- 				</search>
- 			</field>
- 		</record>
-    	<record model='ir.ui.view' id='cliente_res_partner'>
-	        <field name='name'>cliente_res_partner_inherit</field>
-	        <field name='model'>upofly.cliente</field>
-	        <field name='inherit_id' ref='base.view_partner_form'/>
-	        <field name='arch' type='xml'>
-				<field name="name" position="after">
-	                <field name="identificacion" />
-	            </field>
+	<data>
+		<record id="clientes_view_search" model="ir.ui.view">
+			<field name="name">upofly.cliente.search</field>
+			<field name="model">upofly.cliente</field>
+			<field name="arch" type="xml">
+				<search string="Buscar">
+					<filter name='es_particular' string="Particulares"
+						domain="[('is_company','=',False)]" />
+					<filter name='es_empresa' string="Empresas"
+						domain="[('is_company','=',True)]" />
+					<field name="name" string="Cliente"
+						filter_domain="['|',('name','ilike',self),('identificacion','ilike',self)]" />
+				</search>
 			</field>
-	    </record>
-	    <record model="ir.ui.view" id=" cliente_tree_view">
+		</record>
+		<record model='ir.ui.view' id='cliente_res_partner'>
+			<field name='name'>cliente_res_partner_inherit</field>
+			<field name='model'>upofly.cliente</field>
+			<field name='inherit_id' ref='base.view_partner_form' />
+			<field name='arch' type='xml'>
+				<field name="name" position="after">
+					<field name="identificacion" />
+				</field>
+			</field>
+		</record>
+		<record model="ir.ui.view" id=" cliente_tree_view">
 			<field name="name">view_upofly_cliente_tree</field>
 			<field name="model">upofly.cliente</field>
 			<field name="arch" type="xml">
@@ -32,14 +35,16 @@
 				</tree>
 			</field>
 		</record>
-	    <record id="act_clientes" model="ir.actions.act_window">
+		<record id="act_clientes" model="ir.actions.act_window">
 			<field name="name">Gestión de Clientes</field>
 			<field name="res_model">upofly.cliente</field>
 			<field name="view_mode">tree,form</field>
-			<field name="search_view_id" ref="clientes_view_search"/>
+			<field name="search_view_id" ref="clientes_view_search" />
 		</record>
 		<menuitem id="upofly" name="UPOFly" action="act_clientes" />
-		<menuitem name="Clientes" id="clientes_submenu" parent="upofly" sequence="100" />
-		<menuitem name="Ver clientes" id="clientes_submenu_2" parent="clientes_submenu" sequence="100" action="act_clientes" />
- 	</data>
+		<menuitem name="Clientes" id="clientes_submenu"
+			parent="upofly" sequence="100" />
+		<menuitem name="Ver clientes" id="clientes_submenu_2"
+			parent="clientes_submenu" sequence="100" action="act_clientes" />
+	</data>
 </odoo>

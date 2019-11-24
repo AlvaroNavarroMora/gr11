@@ -13,7 +13,7 @@
 						<field name="fecha" />
 						<field name="subtotal" />
 						<field name="iva" />
-						
+						<field name="importeTotal" />
 					</group>
 				</form>
 			</field>

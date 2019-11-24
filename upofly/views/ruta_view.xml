@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="upofly_ruta_form" model="ir.ui.view">
+			<field name="name">Ruta</field>
+			<field name="model">upofly.ruta</field>
+			<field name="arch" type="xml">
+				<form string="form_ruta">
+					<group string="rutas">
+						<field name="nombre" />
+						<field name="descripcion" />
+						<field name="lista_coordenadas" />
+					</group>
+				</form>
+			</field>
+		</record>
+
+		<record id="view_upofly_ruta_form" model="ir.ui.view">
+			<field name="name">view_upofly_ruta_form</field>
+			<field name="model">upofly.ruta</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="form_ruta">
+					<group string="rutas">
+						<field name="nombre" />
+						<field name="descripcion" />
+						<field name="lista_coordenadas" />
+					</group>
+				</form>
+			</field>
+		</record>
+
+		<record id="upofly_ruta_tree_view" model="ir.ui.view">
+			<field name="name">upofly_ruta_tree_view</field>
+			<field name="model">upofly.ruta</field>
+			<field name="arch" type="xml">
+				<tree string="tree_string">
+					<field name="nombre" />
+					<field name="descripcion" />
+					<field name="lista_coordenadas" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="act_ruta" model="ir.actions.act_window">
+			<field name="name">Rutas</field>
+			<field name="res_model">upofly.ruta</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem id="vuelo_submenu" parent="upofly" name="vuelo"
+			sequence="100" />
+		<menuitem id="ruta_submenu" parent="vuelo_submenu"
+			name="Rutas" action="act_ruta" sequence="110" />
+	</data>
+
+</odoo>

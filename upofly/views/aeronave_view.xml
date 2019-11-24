@@ -48,6 +48,10 @@
 		</record>
 
 
+
+		
+
+
 		<record id="act_aeronaves" model="ir.actions.act_window">
 			<field name="name">Aeronaves</field>
 			<field name="res_model">upofly.aeronave</field>

@@ -5,8 +5,8 @@
 			<field name="name">Ruta</field>
 			<field name="model">upofly.ruta</field>
 			<field name="arch" type="xml">
-				<form string="form_ruta">
-					<group string="rutas">
+				<form>
+					<group string="Rutas">
 						<field name="nombre" />
 						<field name="descripcion" />
 						<field name="lista_coordenadas" />
@@ -14,22 +14,7 @@
 				</form>
 			</field>
 		</record>
-
-		<record id="view_upofly_ruta_form" model="ir.ui.view">
-			<field name="name">view_upofly_ruta_form</field>
-			<field name="model">upofly.ruta</field>
-			<field name="type">form</field>
-			<field name="arch" type="xml">
-				<form string="form_ruta">
-					<group string="rutas">
-						<field name="nombre" />
-						<field name="descripcion" />
-						<field name="lista_coordenadas" />
-					</group>
-				</form>
-			</field>
-		</record>
-
+		
 		<record id="upofly_ruta_tree_view" model="ir.ui.view">
 			<field name="name">upofly_ruta_tree_view</field>
 			<field name="model">upofly.ruta</field>
@@ -49,7 +34,12 @@
 			<field name="view_mode">tree,form</field>
 		</record>
 
+<<<<<<< HEAD
 		<menuitem id="vuelo_submenu" parent="upofly" name="Vuelo" sequence="100" />
+=======
+		<menuitem id="vuelo_submenu" parent="upofly" name="Vuelos"
+			sequence="100" />
+>>>>>>> refs/heads/master
 		<menuitem id="ruta_submenu" parent="vuelo_submenu"
 			name="Rutas" action="act_ruta" sequence="110" />
 	</data>

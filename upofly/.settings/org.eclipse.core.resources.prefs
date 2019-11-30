@@ -1,5 +1,6 @@
 eclipse.preferences.version=1
 encoding//models/__init__.py=utf-8
+encoding//models/aeronave.py=utf-8
 encoding//models/cliente.py=utf-8
 encoding//models/parteMantenimiento.py=utf-8
 encoding//models/piloto.py=utf-8

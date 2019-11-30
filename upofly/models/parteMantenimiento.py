@@ -8,6 +8,6 @@ class parteMantenimiento(models.Model):
     
     fecha = fields.Date("Fecha", required=True)
     descripcion = fields.Text("Descripcion")
-    estado = fields.Selection([('En espera', 'En espera'), ('En reparacion', 'En reparacion'), ('Reparado', 'Reparado')], 'Estado del mantenimiento')
+    estado = fields.Selection([('espera', 'En espera'), ('reparacion', 'En reparacion'), ('reparado', 'Reparado')], 'Estado del mantenimiento')
     tiempoEstimado = fields.Integer("Tiempo Estimado de reparación (Horas)", required = True)
     aeronave_id = fields.Many2one("upofly.aeronave", "Aeronave")

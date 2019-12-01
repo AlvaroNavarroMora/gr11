@@ -9,7 +9,6 @@
 					<group string="Aeronaves">
 						<field name="modelo" />
 						<field name="capacidad" />
-						<field name="suplemento" />
 						<field name="matricula" />
 						<field name="parte_mantenimiento_ids" />
 					</group>
@@ -26,7 +25,6 @@
 					<group string="Aeronaves">
 						<field name="modelo" />
 						<field name="capacidad" />
-						<field name="suplemento" />
 						<field name="matricula" />
 						<field name="parte_mantenimiento_ids" />
 					</group>
@@ -41,7 +39,6 @@
 				<tree string="tree_string">
 					<field name="modelo" />
 					<field name="capacidad" />
-					<field name="suplemento" />
 					<field name="matricula" />
 				</tree>
 			</field>

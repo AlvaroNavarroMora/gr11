@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 	<data>
+<<<<<<< HEAD
+=======
+		<record model="ir.ui.view" id="upofly_aeronave_form">
+			<field name="name">Aeronave</field>
+			<field name="model">upofly.aeronave</field>
+			<field name="arch" type="xml">
+				<form string="Form de aeronave">
+					<group string="Aeronaves">
+						<field name="modelo" />
+						<field name="capacidad" />
+						<field name="matricula" />
+						<field name="parte_mantenimiento_ids" />
+					</group>
+				</form>
+			</field>
+		</record>
+
+>>>>>>> refs/heads/Alvaro
 		<record model="ir.ui.view" id="view_upofly_aeronave_form">
 			<field name="name">view_upofly_aeronave_form</field>
 			<field name="model">upofly.aeronave</field>
@@ -11,7 +29,11 @@
 						<field name="modelo" />
 						<field name="matricula" />
 						<field name="capacidad" />
+<<<<<<< HEAD
 						<field name="suplemento" />
+=======
+						<field name="matricula" />
+>>>>>>> refs/heads/Alvaro
 						<field name="parte_mantenimiento_ids" />
 					</group>
 				</form>
@@ -26,7 +48,11 @@
 					<field name="modelo" />
 					<field name="matricula" />
 					<field name="capacidad" />
+<<<<<<< HEAD
 					<field name="suplemento" />
+=======
+					<field name="matricula" />
+>>>>>>> refs/heads/Alvaro
 				</tree>
 			</field>
 		</record>

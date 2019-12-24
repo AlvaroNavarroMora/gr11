@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="upofly_venta_form" model="ir.ui.view">
+			<field name="name">Venta</field>
+			<field name="model">upofly.venta</field>
+			<field name="arch" type="xml">
+				<form>
+					<group string="Ventas">
+						<field name="total" />
+						<field name="factura_id" />
+						<field name="cliente_id" />
+					</group>
+				</form>
+			</field>
+		</record>
+		
+		<record id="upofly_venta_tree_view" model="ir.ui.view">
+			<field name="name">upofly_venta_tree_view</field>
+			<field name="model">upofly.venta</field>
+			<field name="arch" type="xml">
+				<tree string="tree_string">
+					<field name="total" />
+					<field name="factura_id" />
+					<field name="cliente_id" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="act_venta" model="ir.actions.act_window">
+			<field name="name">Ventas</field>
+			<field name="res_model">upofly.venta</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+
+		<menuitem id="ventas_submenu" parent="upofly" name="Ventas"
+			sequence="180" />
+		<menuitem id="venta_submenu" parent="ventas_submenu"
+			name="Menu ventas" action="act_venta" sequence="100" />
+	</data>
+
+</odoo>

@@ -14,6 +14,7 @@
 						<field name="subtotal" />
 						<field name="iva" />
 						<field name="importeTotal" />
+						<field name="venta_id" />
 					</group>
 				</form>
 			</field>
@@ -33,6 +34,7 @@
 						<field name="subtotal" />
 						<field name="iva" />
 						<field name="importeTotal" />
+						<field name="venta_id" />
 					</group>
 				</form>
 			</field>
@@ -46,6 +48,7 @@
 					<field name="identificador" />
 					<field name="concepto" />
 					<field name="importeTotal" />
+					<field name="venta_id" />
 				</tree>
 			</field>
 		</record>

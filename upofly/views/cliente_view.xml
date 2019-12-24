@@ -21,6 +21,7 @@
 			<field name='arch' type='xml'>
 				<field name="name" position="after">
 					<field name="identificacion" />
+					<field name="ventas_ids" />
 				</field>
 			</field>
 		</record>

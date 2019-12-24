@@ -4,6 +4,7 @@ from odoo import models, fields, api
 
 class factura(models.Model):
      _name = 'upofly.factura'
+     _rec_name = 'identificador'
 
      identificador = fields.Integer("ID", required=True)
      iva = fields.Float("IVA%", required=True)
@@ -12,6 +13,7 @@ class factura(models.Model):
      concepto = fields.Char("Concepto", required=True)
      descripcion = fields.Text("Descripcion")
      fecha = fields.Date("Fecha")
+     venta_id = fields.Many2one("upofly.venta", "Venta")
 
          
      @api.depends('subtotal', 'iva')

@@ -10,6 +10,7 @@
 						<field name="total" />
 						<field name="factura_id" />
 						<field name="cliente_id" />
+						<field name="lineas_de_venta_ids" />
 					</group>
 				</form>
 			</field>
@@ -23,6 +24,7 @@
 					<field name="total" />
 					<field name="factura_id" />
 					<field name="cliente_id" />
+					<field name="lineas_de_venta_ids" />
 				</tree>
 			</field>
 		</record>

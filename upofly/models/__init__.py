@@ -10,3 +10,4 @@ from . import factura
 from . import vuelo
 from . import coordenada
 from . import venta
+from . import linea_de_venta

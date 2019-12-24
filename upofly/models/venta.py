@@ -9,3 +9,4 @@ class venta(models.Model):
     total = fields.Float("Total")
     factura_id = fields.Many2one("upofly.factura", "Factura")
     cliente_id = fields.Many2one("upofly.cliente", "Cliente")
+    lineas_de_venta_ids = fields.One2many("upofly.linea_de_venta", "venta_id", string="Líneas de Venta")

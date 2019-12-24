@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="upofly_linea_de_venta_form" model="ir.ui.view">
+			<field name="name">Linea de Venta</field>
+			<field name="model">upofly.linea_de_venta</field>
+			<field name="arch" type="xml">
+				<form>
+					<group string="Linea de Venta">
+						<field name="precio" />
+						<field name="venta_id" />
+					</group>
+				</form>
+			</field>
+		</record>
+		
+		<record id="upofly_linea_de_venta_tree_view" model="ir.ui.view">
+			<field name="name">upofly_linea_de_venta_tree_view</field>
+			<field name="model">upofly.linea_de_venta</field>
+			<field name="arch" type="xml">
+				<tree string="tree_string">
+					<field name="precio" />
+					<field name="venta_id" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="act_linea_de_venta" model="ir.actions.act_window">
+			<field name="name">Línea de Venta</field>
+			<field name="res_model">upofly.linea_de_venta</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+
+
+		<menuitem id="linea_de_venta_submenu" parent="ventas_submenu"
+			name="Líneas de Venta" action="act_linea_de_venta" sequence="110" />
+	</data>
+
+</odoo>

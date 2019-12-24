@@ -9,7 +9,7 @@
 					<group string="Rutas">
 						<field name="nombre" />
 						<field name="descripcion" />
-						<field name="lista_coordenadas" />
+						<field name="coordenada_ids" />
 					</group>
 				</form>
 			</field>
@@ -22,7 +22,7 @@
 				<tree string="tree_string">
 					<field name="nombre" />
 					<field name="descripcion" />
-					<field name="lista_coordenadas" />
+					<field name="coordenada_ids" />
 				</tree>
 			</field>
 		</record>

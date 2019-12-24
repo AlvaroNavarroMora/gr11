@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="upofly_coordenada_form" model="ir.ui.view">
+			<field name="name">Coordenada</field>
+			<field name="model">upofly.coordenada</field>
+			<field name="arch" type="xml">
+				<form>
+					<group string="Coordenada">
+						<field name="coordenada" />
+						<field name="ruta_ids" />
+					</group>
+				</form>
+			</field>
+		</record>
+		
+		<record id="upofly_coordenada_tree_view" model="ir.ui.view">
+			<field name="name">upofly_coordenada_tree_view</field>
+			<field name="model">upofly.coordenada</field>
+			<field name="arch" type="xml">
+				<tree string="tree_string">
+					<field name="coordenada" />
+					<field name="ruta_ids" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="act_coordenada" model="ir.actions.act_window">
+			<field name="name">Coordenadas</field>
+			<field name="res_model">upofly.coordenada</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+
+		<menuitem id="coordenada_submenu" parent="vuelo_submenu"
+			name="Coordenadas" action="act_coordenada" sequence="120" />
+	</data>
+
+</odoo>

@@ -22,6 +22,7 @@
 							<field name='nombre' />
 							<field name='dni' />
 							<field name='num_licencia' />
+							<field name='vuelo_id' />
 						</group>
 						<group colspan="2" col="2">
 							<field name='imagen' nolabel='1' widget='image'

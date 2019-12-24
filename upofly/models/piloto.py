@@ -9,3 +9,4 @@ class piloto(models.Model):
     dni = fields.Char('DNI', size=9, required=True)
     num_licencia = fields.Char('Licencia Nº', size=10, required=True)
     imagen = fields.Binary('Foto')
+    vuelo_id = fields.Many2many('upofly.vuelo', string="Vuelos")

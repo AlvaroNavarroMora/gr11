@@ -8,3 +8,4 @@ from . import cliente
 from . import piloto
 from . import factura
 from . import vuelo
+from . import coordenada

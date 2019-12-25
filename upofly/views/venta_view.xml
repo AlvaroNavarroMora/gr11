@@ -40,7 +40,7 @@
 		<menuitem id="ventas_submenu" parent="upofly" name="Ventas"
 			sequence="180" />
 		<menuitem id="venta_submenu" parent="ventas_submenu"
-			name="Menu ventas" action="act_venta" sequence="100" />
+			name="Ventas" action="act_venta" sequence="100" />
 	</data>
 
 </odoo>

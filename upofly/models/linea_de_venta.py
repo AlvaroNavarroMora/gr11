@@ -8,4 +8,5 @@ class linea_de_venta(models.Model):
     
     precio = fields.Float("Precio")
     venta_id = fields.Many2one("upofly.venta", "Venta")
+    servicio_ids = fields.Many2one("upofly.servicio", "Servicios")
 

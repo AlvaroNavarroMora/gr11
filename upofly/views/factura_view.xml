@@ -66,6 +66,6 @@
 		</record>
 
 		<menuitem name="Facturas" id="factura_submenu_2"
-			parent="aeronaves_submenu" sequence="120" action="act_factura" />
+			parent="ventas_submenu" sequence="120" action="act_factura" />
 	</data>
 </odoo>

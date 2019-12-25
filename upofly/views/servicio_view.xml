@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="upofly_servicio_form" model="ir.ui.view">
+			<field name="name">Sevicio</field>
+			<field name="model">upofly.servicio</field>
+			<field name="arch" type="xml">
+				<form>
+					<group string="Servicio">
+						<field name="nombre" />
+						<field name="descripcion" />
+						<field name="precio" />
+					</group>
+				</form>
+			</field>
+		</record>
+		
+		<record id="upofly_servicio_tree_view" model="ir.ui.view">
+			<field name="name">upofly_servicio_tree_view</field>
+			<field name="model">upofly.servicio</field>
+			<field name="arch" type="xml">
+				<tree string="tree_string">
+					<field name="nombre" />
+					<field name="descripcion" />
+					<field name="precio" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="act_servicio" model="ir.actions.act_window">
+			<field name="name">Servicio</field>
+			<field name="res_model">upofly.servicio</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+
+
+		<menuitem id="servicio_submenu" parent="ventas_submenu"
+			name="Servicios" action="act_servicio" sequence="190" />
+	</data>
+
+</odoo>

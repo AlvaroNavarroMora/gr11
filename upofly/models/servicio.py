@@ -8,5 +8,6 @@ class servicio(models.Model):
     
     nombre = fields.Char("Nombre", required=True)
     descripcion = fields.Char("Descripcion", required=True)
-    precio = fields.Float("Precio", required=True)
+    precioHora = fields.Float("Precio por Hora", required=True)
+    precioBase = fields.Float("Precio base", required=True)
     lineas_de_venta_ids = fields.One2many("upofly.linea_de_venta", "servicio_ids", string="Líneas de Venta")

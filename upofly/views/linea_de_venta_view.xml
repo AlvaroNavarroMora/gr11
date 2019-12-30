@@ -7,9 +7,11 @@
 			<field name="arch" type="xml">
 				<form>
 					<group string="Linea de Venta">
-						<field name="precio" />
+						<field name="num_horas" />
 						<field name="venta_id" />
 						<field name="servicio_ids" />
+						<field name="subtotal" />
+						<field name="vuelo_id" />
 					</group>
 				</form>
 			</field>
@@ -20,9 +22,11 @@
 			<field name="model">upofly.linea_de_venta</field>
 			<field name="arch" type="xml">
 				<tree string="tree_string">
-					<field name="precio" />
+					<field name="num_horas" />
 					<field name="venta_id" />
 					<field name="servicio_ids" />
+					<field name="subtotal" />
+					<field name="vuelo_id" />
 				</tree>
 			</field>
 		</record>

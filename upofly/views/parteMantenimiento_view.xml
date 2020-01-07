@@ -7,19 +7,21 @@
 			<field name="arch" type="xml">
 				<search string="Buscar">
 					<filter name='en_espera' string="En espera"
-						domain="[('estado','=','espera')]" />
+						domain="[('state','=','espera')]" />
 					<filter name='en_reparacion' string="En reparación"
-						domain="[('estado','=','reparacion')]" />
+						domain="[('state','=','reparacion')]" />
 					<filter name='reparado' string="Reparado"
-						domain="[('estado','=','reparado')]" />
+						domain="[('state','=','reparado')]" />
 					<field name="aeronave_id" string="Aeronave"
 						filter_domain="[('aeronave_id','ilike',self)]" />
 					<group expand="0" string="Agrupar Por">
-						<filter name="group_by_aeronave_id" string="Aeronave" context="{'group_by':'aeronave_id'}"/>
+						<filter name="group_by_aeronave_id" string="Aeronave"
+							context="{'group_by':'aeronave_id'}" />
 					</group>
 				</search>
 			</field>
 		</record>
+
 		<record model="ir.ui.view"
 			id="view_upofly_parteMantenimiento_form">
 			<field name="name">view_upofly_parteMantenimiento_form</field>
@@ -31,9 +33,16 @@
 						<field name="aeronave_id" />
 						<field name="fecha" />
 						<field name="descripcion" />
-						<field name="estado" />
+						<field name="state" />
 						<field name="tiempoEstimado" />
 					</group>
+					<header>
+						<button name="btn_submit_to_reparacion" string="Reparar"
+							type="object" class="oe_highlight" states="espera" />
+						<button name="btn_submit_to_reparado" string="Reparado"
+							type="object" class="oe_highlight" states="reparacion" />
+						<field name='state' widget='statusbar' clickable='True' />
+					</header>
 				</form>
 			</field>
 		</record>
@@ -47,7 +56,7 @@
 					<field name="aeronave_id" />
 					<field name="fecha" />
 					<field name="descripcion" />
-					<field name="estado" />
+					<field name="state" />
 					<field name="tiempoEstimado" />
 				</tree>
 			</field>
@@ -62,7 +71,7 @@
 				<calendar string="Partes de Matenimiento"
 					date_start="fecha" date_delay="tiempoEstimado" mode="month"
 					color="aeronave_id">
-					<field name="estado" />
+					<field name="state" />
 				</calendar>
 			</field>
 		</record>

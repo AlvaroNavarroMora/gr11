@@ -9,4 +9,4 @@ class ruta(models.Model):
     
     nombre = fields.Char('Nombre', size=64, required=True)
     descripcion = fields.Char("Descripcion", size=64,required=True)
-    coordenada_ids = fields.Many2many("upofly.coordenada", string="Coordenadas")
+    localizacion_ids = fields.Many2many("upofly.localizacion", string="Localizaciones")

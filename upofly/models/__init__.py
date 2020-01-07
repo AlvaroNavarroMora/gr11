@@ -8,7 +8,7 @@ from . import cliente
 from . import piloto
 from . import factura
 from . import vuelo
-from . import coordenada
+from . import localizacion
 from . import venta
 from . import linea_de_venta
 from . import servicio

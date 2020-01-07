@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="upofly_localizacion_form" model="ir.ui.view">
+			<field name="name">localizacion</field>
+			<field name="model">upofly.localizacion</field>
+			<field name="arch" type="xml">
+				<form>
+					<group string="localizacion">
+						<field name="ubicacion" />
+						<field name="latitud" />
+						<field name="longitud" />
+					</group>
+				</form>
+			</field>
+		</record>
+
+		<record id="upofly_localizacion_tree_view" model="ir.ui.view">
+			<field name="name">upofly_localizacion_tree_view</field>
+			<field name="model">upofly.localizacion</field>
+			<field name="arch" type="xml">
+				<tree string="tree_string">
+					<field name="ubicacion" />
+					<field name="latitud" />
+					<field name="longitud" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="act_localizacion" model="ir.actions.act_window">
+			<field name="name">localizaciones</field>
+			<field name="res_model">upofly.localizacion</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem id="localizacion_submenu" parent="vuelo_submenu"
+			name="Localizaciones" action="act_localizacion" sequence="120" />
+	</data>
+
+</odoo>

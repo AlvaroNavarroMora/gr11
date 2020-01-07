@@ -53,6 +53,6 @@
 		</record>
 
 		<menuitem id="vuelo_submenu_2" parent="vuelo_submenu"
-			name="Vuelos" action="act_vuelos" sequence="120" />
+			name="Vuelos" action="act_vuelos" sequence="109" />
 	</data>
 </odoo>

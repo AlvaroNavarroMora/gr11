@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 	<data>
+		<record id="aeronave_view_search" model="ir.ui.view">
+			<field name="name">upofly.aeronave.search</field>
+			<field name="model">upofly.aeronave</field>
+			<field name="arch" type="xml">
+				<search string="Buscar">
+					<filter name='helicopteros' string="Helicópteros"
+						domain="[('es_helicoptero','=','True')]" />
+				</search>
+			</field>
+		</record>
 
 		<record model="ir.ui.view" id="upofly_aeronave_form">
 			<field name="name">Aeronave</field>
@@ -11,8 +21,16 @@
 						<field name="modelo" />
 						<field name="capacidad" />
 						<field name="matricula" />
-						<field name="parte_mantenimiento_ids" />
+						<field name="es_helicoptero" />
 					</group>
+					<notebook>
+						<page string="Vuelos">
+							<field name="vuelo_ids" />
+						</page>
+						<page string="Mantenimiento">
+							<field name="parte_mantenimiento_ids" />
+						</page>
+					</notebook>
 				</form>
 			</field>
 		</record>
@@ -27,10 +45,11 @@
 					<field name="matricula" />
 					<field name="capacidad" />
 					<field name="matricula" />
+					<field name="es_helicoptero" />
 				</tree>
 			</field>
 		</record>
-		
+
 		<record id="act_aeronaves" model="ir.actions.act_window">
 			<field name="name">Aeronaves</field>
 			<field name="res_model">upofly.aeronave</field>
@@ -40,7 +59,7 @@
 		<menuitem id="upofly" name="Upofly" action="act_aeronaves" />
 		<menuitem name="Aeronaves" id="aeronaves_submenu"
 			parent="upofly" sequence="100" />
-		<menuitem name="Ver aeronaves" id="aeronaves_submenu_2"
+		<menuitem name="Ver Aeronaves" id="aeronaves_submenu_2"
 			parent="aeronaves_submenu" sequence="100" action="act_aeronaves" />
 	</data>
 </odoo>

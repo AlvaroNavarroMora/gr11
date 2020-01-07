@@ -13,8 +13,8 @@ class linea_de_venta(models.Model):
     
     
     subtotal = fields.Float("Subtotal", compute="_calcular_subtotal")
-    precio_base_id = fields.Float("Precio Base", related='servicio_ids.precioBase')
-    precio_hora_id = fields.Float("Precio por Hora", related='servicio_ids.precioHora')
+    precio_base_id = fields.Float("Precio Base", related='servicio_ids.precio_base')
+    precio_hora_id = fields.Float("Precio por Hora", related='servicio_ids.precio_hora')
     
     @api.depends('num_horas', 'precio_base_id', 'precio_hora_id')
     def _calcular_subtotal(self):

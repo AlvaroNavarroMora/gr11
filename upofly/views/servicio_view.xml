@@ -9,8 +9,8 @@
 					<group string="Servicio">
 						<field name="nombre" />
 						<field name="descripcion" />
-						<field name="precioHora" />
-						<field name="precioBase" />
+						<field name="precio_hora" />
+						<field name="precio_base" />
 					</group>
 				</form>
 			</field>
@@ -23,8 +23,8 @@
 				<tree string="tree_string">
 					<field name="nombre" />
 					<field name="descripcion" />
-					<field name="precioHora" />
-					<field name="precioBase" />
+					<field name="precio_hora" />
+					<field name="precio_base" />
 				</tree>
 			</field>
 		</record>

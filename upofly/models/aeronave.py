@@ -10,3 +10,5 @@ class aeronave(models.Model):
     capacidad = fields.Integer("Capacidad", required=True)
     matricula = fields.Char("Matrícula", size=6, required=True)
     parte_mantenimiento_ids = fields.One2many("upofly.parte_mantenimiento", "aeronave_id", string="Partes de Mantenimiento")
+    vuelo_ids = fields.One2many('upofly.vuelo',"aeronave_id", string="Vuelos")
+    es_helicoptero = fields.Boolean("Helicóptero")

@@ -9,6 +9,6 @@
     'version': '0.1',
     'depends': ['base'],
     'demo': [],
-    'data': ['views/aeronave_view.xml', 'views/parteMantenimiento_view.xml', 'views/ruta_view.xml','views/cliente_view.xml','views/piloto_view.xml','views/factura_view.xml','views/vuelo_view.xml', 'views/coordenada_view.xml', 'views/venta_view.xml', 'views/linea_de_venta_view.xml', 'views/servicio_view.xml'],
+    'data': ['views/aeronave_view.xml','views/parteMantenimiento_view.xml','views/ruta_view.xml','views/cliente_view.xml','views/piloto_view.xml','views/vuelo_view.xml','views/localizacion_view.xml','views/venta_view.xml','views/factura_view.xml','views/linea_de_venta_view.xml','views/servicio_view.xml'],
     'aplication': True,
 }

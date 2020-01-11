@@ -1,0 +1,67 @@
+
+<odoo>
+
+	<data noupdate="1">
+		<!-- LINEA DE VENTA -->
+		<record id="ldv0" model="linea_de_venta">
+			<field name="num_horas">10.0</field>
+			<field name="servicio_ids" ref="servicio0" />
+			<field name="vuelo_id" ref="vuelo3" />
+		</record>
+<!-- 		<record id="ldv1" model="linea_de_venta"> -->
+<!-- 			<field name="num_horas">5</field> -->
+<!-- 			<field name="servicio_ids" ref="servicio0" /> -->
+<!-- 			<field name="vuelo_id" ref="vuelo2" /> -->
+<!-- 		</record> -->
+<!-- 		<record id="ldv2" model="linea_de_venta"> -->
+<!-- 			<field name="num_horas">2</field> -->
+<!-- 			<field name="servicio_ids" ref="servicio0" /> -->
+<!-- 			<field name="vuelo_id" ref="vuelo1" /> -->
+<!-- 		</record> -->
+<!-- 		<record id="ldv3" model="linea_de_venta"> -->
+<!-- 			<field name="num_horas">7</field> -->
+<!-- 			<field name="servicio_ids" ref="servicio0" /> -->
+<!-- 			<field name="vuelo_id" ref="vuelo0" /> -->
+<!-- 		</record> -->
+<!-- 		<record id="ldv4" model="linea_de_venta"> -->
+<!-- 			<field name="num_horas">4</field> -->
+<!-- 			<field name="servicio_ids" ref="servicio0" /> -->
+<!-- 			<field name="vuelo_id" ref="vuelo0" /> -->
+<!-- 		</record> -->
+<!-- 		<record id="ldv5" model="linea_de_venta"> -->
+<!-- 			<field name="num_horas">2</field> -->
+<!-- 			<field name="servicio_ids" ref="servicio0" /> -->
+<!-- 			<field name="vuelo_id" ref="vuelo1" /> -->
+<!-- 		</record> -->
+<!-- 		<record id="ldv6" model="linea_de_venta"> -->
+<!-- 			<field name="num_horas">5</field> -->
+<!-- 			<field name="servicio_ids" ref="servicio0" /> -->
+<!-- 			<field name="vuelo_id" ref="vuelo2" /> -->
+<!-- 		</record> -->
+ 		<!-- VENTAS -->
+<!-- 		<record id="venta0" model="venta"> -->
+<!-- 			<field name="num_horas">5</field> -->
+<!-- 			<field name="servicio_ids" ref="servicio0" /> -->
+<!-- 			<field name="lineas_de_venta_ids" -->
+<!-- 				eval="[([ref('ldv0')],[ref('ldv1')],[ref('loc2')])]" /> -->
+<!-- 		</record> -->
+<!-- 		<record id="venta1" model="venta"> -->
+<!-- 			<field name="num_horas">5</field> -->
+<!-- 			<field name="servicio_ids" ref="servicio0" /> -->
+<!-- 			<field name="lineas_de_venta_ids" -->
+<!-- 				eval="[([ref('ldv0')],[ref('ldv1')],[ref('loc2')])]" /> -->
+<!-- 		</record> -->
+<!-- 		<record id="venta2" model="venta"> -->
+<!-- 			<field name="num_horas">5</field> -->
+<!-- 			<field name="servicio_ids" ref="servicio0" /> -->
+<!-- 			<field name="lineas_de_venta_ids" -->
+<!-- 				eval="[([ref('ldv3')],[ref('ldv4')])]" /> -->
+<!-- 		</record> -->
+<!-- 		<record id="venta2" model="venta"> -->
+<!-- 			<field name="num_horas">5</field> -->
+<!-- 			<field name="servicio_ids" ref="servicio0" /> -->
+<!-- 			<field name="lineas_de_venta_ids" ref="ldv5" /> -->
+<!-- 		</record> -->
+	</data>
+
+</odoo>

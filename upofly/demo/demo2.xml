@@ -15,24 +15,49 @@
 			<field name="identificacion">97812234L</field>
 			<field name="phone">654667666</field>
 		</record>
+		
 		<!-- PILOTOS -->
 		<record id="piloto0" model="upofly.piloto">
 			<field name="nombre">Gary oldad</field>
-			<field name="num_licencia">Marmita</field>
+			<field name="num_licencia">11111111</field>
 			<field name="dni">74839484Z</field>
 		</record>
 		<record id="piloto1" model="upofly.piloto">
 			<field name="nombre">Odonis</field>
-			<field name="num_licencia">Marmita</field>
+			<field name="num_licencia">22222222</field>
 			<field name="dni">23456454L</field>
 		</record>
 		<record id="piloto2" model="upofly.piloto">
 			<field name="nombre">Borja</field>
-			<field name="num_licencia">Marmita</field>
+			<field name="num_licencia">333333333</field>
 			<field name="dni">12237825P</field>
 		</record>
-		<!-- VUELOS -->
 		
+		<!-- VUELOS -->
+		<record id="vuelo0" model="upofly.vuelo">
+			<field name="fecha">12/01/2020</field>
+			<field name="aeronave_id" ref='nave0' />
+			<field name="ruta_id" ref='ruta1'/>
+			<field name="piloto_id" eval="[(ref('piloto1'))]" />
+		</record>
+		<record id="vuelo1" model="upofly.vuelo">
+			<field name="fecha">26/01/2020</field>
+			<field name="aeronave_id" ref="nave0" />
+			<field name="ruta_id" ref="ruta1"/>
+			<field name="piloto_id" eval="[(ref('piloto0'))]"/>
+		</record>
+		<record id="vuelo2" model="upofly.vuelo">
+			<field name="fecha">30/01/2020</field>
+			<field name="aeronave_id" ref="nave1" />
+			<field name="ruta_id" ref="ruta0"/>
+			<field name="piloto_id" eval="[(ref('piloto2'))]"/>
+		</record>
+		<record id="vuelo3" model="upofly.vuelo">
+			<field name="fecha">30/01/2020</field>
+			<field name="aeronave_id" ref="nave2" />
+			<field name="ruta_id" ref="ruta1"/>
+			<field name="piloto_id" eval="[(ref('piloto1'))]"/>
+		</record>
 	</data>
 
 </odoo>

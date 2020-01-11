@@ -7,11 +7,19 @@
 			<field name="modelo">TZX</field>
 			<field name="capacidad">10</field>
 			<field name="matricula">EC-LKX</field>
+			<field name="es_helicoptero">false</field>
 		</record>
 		<record id="nave1" model="upofly.aeronave">
 			<field name="modelo">SSDA</field>
 			<field name="capacidad">20</field>
 			<field name="matricula">EC-KKK</field>
+			<field name="es_helicoptero">false</field>
+		</record>
+		<record id="nave2" model="upofly.aeronave">
+			<field name="modelo">TSI</field>
+			<field name="capacidad">40</field>
+			<field name="matricula">EC-KKQ</field>
+			<field name="es_helicoptero">true</field>
 		</record>
 		<!-- LOCALIZACIONES -->
 		<record id="loc0" model="upofly.localizacion">
@@ -53,8 +61,52 @@
 				eval="[([ref('loc1')],[ref('loc3')],[ref('loc0')])]" />
 		</record>
 		<!-- PARTES MANTENIMIENTO -->
-		
+
+		<record id="parte0" model="upofly.parte_mantenimiento">
+			<field name="fecha">05/01/2020</field>
+			<field name="descripcion">
+				Se ha despintado la matricula.
+			</field>
+			<field name="tiempoEstimado">10</field>
+			<field name="aeronave_id" ref='nave0'/>
+			<field name="state">espera</field>
+		</record>
+		<record id="parte1" model="upofly.parte_mantenimiento">
+			<field name="fecha">21/12/2019</field>
+			<field name="descripcion">
+				El motor se queda parado.
+			</field>
+			<field name="tiempoEstimado">37</field>
+			<field name="aeronave_id" ref='nave0'/>
+			<field name="state">reparado</field>
+		</record>
+		<record id="parte2" model="upofly.parte_mantenimiento">
+			<field name="fecha">19/11/2019</field>
+			<field name="descripcion">
+				Instalar las luces de emergencia y reforzar hélice.
+			</field>
+			<field name="tiempoEstimado">22</field>
+			<field name="aeronave_id" ref='nave1'/>
+			<field name="state">reparado</field>
+		</record>
 		<!-- SERVICIOS -->
+		<record id="servicio0" model="upofly.servicio">
+			<field name="nombre">Paseo turístico</field>
+			<field name="descripcion">
+				Una vuelta visitando lugares con mucho encanto desde una perspectiva única.
+			</field>
+			<field name="precio_hora">15.63</field>
+			<field name="precio_base">50.99</field>
+		</record>
+		<record id="servicio1" model="upofly.servicio">
+			<field name="nombre">Fumigacion</field>
+			<field name="descripcion">
+				Vamos a su campo y lo dejamos bien limpito de bichos.
+			</field>
+			<field name="precio_hora">10.63</field>
+			<field name="precio_base">180.99</field>
+		</record>
+		
 	</data>
 
 </odoo>

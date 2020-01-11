@@ -1,30 +1,64 @@
+
 <odoo>
-    <data>
-        <!--  -->
-        <!--   <record id="object0" model="upofly.upofly"> -->
-        <!--     <field name="name">Object 0</field> -->
-        <!--     <field name="value">0</field> -->
-        <!--   </record> -->
-        <!--  -->
-        <!--   <record id="object1" model="upofly.upofly"> -->
-        <!--     <field name="name">Object 1</field> -->
-        <!--     <field name="value">10</field> -->
-        <!--   </record> -->
-        <!--  -->
-        <!--   <record id="object2" model="upofly.upofly"> -->
-        <!--     <field name="name">Object 2</field> -->
-        <!--     <field name="value">20</field> -->
-        <!--   </record> -->
-        <!--  -->
-        <!--   <record id="object3" model="upofly.upofly"> -->
-        <!--     <field name="name">Object 3</field> -->
-        <!--     <field name="value">30</field> -->
-        <!--   </record> -->
-        <!--  -->
-        <!--   <record id="object4" model="upofly.upofly"> -->
-        <!--     <field name="name">Object 4</field> -->
-        <!--     <field name="value">40</field> -->
-        <!--   </record> -->
-        <!--  -->
-    </data>
+
+	<data noupdate="1">
+		<record id="0" model="upofly.aeronave">
+			<field name="modelo">TZX</field>
+			<field name="capacidad">10</field>
+			<field name="matricula">SE123A</field>
+		</record>
+		<record id="1" model="upofly.aeronave">
+			<field name="modelo">TZX</field>
+	<field name="capacidad">20</field>
+			<field name="matricula">SE893A</field>
+		</record>
+		<record id="2" model="upofly.cliente">
+			<field name="name">Raquel</field>
+<!-- 			<field name="partner_id">20</field> -->
+			<field name="identificacion">SE893A</field>
+			<field name="ventas_ids">10</field>
+		</record>
+		
+		<record id="3" model="upofly.venta">
+			<field name="factura_id">30</field>
+			<field name="cliente_id">2</field>
+			<field name="lineas_de_venta_ids">4</field>
+		</record>
+		<record id="4" model="upofly.linea_de_venta">
+			<field name="servicio_ids">50</field>
+			<field name="venta_id">3</field>
+			<field name="vuelo_id">6</field>
+		</record>
+		<record id="5" model="upofly.linea_de_venta">
+			<field name="servicio_ids">50</field>
+			<field name="venta_id">3</field>
+			<field name="vuelo_id">6</field>
+		</record>
+	</data>
+	<!-- -->
+	<!-- <record id="object0" model="upofly.upofly"> -->
+	<!-- <field name="name">Object 0</field> -->
+	<!-- <field name="value">0</field> -->
+	<!-- </record> -->
+	<!-- -->
+	<!-- <record id="object1" model="upofly.upofly"> -->
+	<!-- <field name="name">Object 1</field> -->
+	<!-- <field name="value">10</field> -->
+	<!-- </record> -->
+	<!-- -->
+	<!-- <record id="object2" model="upofly.upofly"> -->
+	<!-- <field name="name">Object 2</field> -->
+	<!-- <field name="value">20</field> -->
+	<!-- </record> -->
+	<!-- -->
+	<!-- <record id="object3" model="upofly.upofly"> -->
+	<!-- <field name="name">Object 3</field> -->
+	<!-- <field name="value">30</field> -->
+	<!-- </record> -->
+	<!-- -->
+	<!-- <record id="object4" model="upofly.upofly"> -->
+	<!-- <field name="name">Object 4</field> -->
+	<!-- <field name="value">40</field> -->
+	<!-- </record> -->
+	<!-- -->
 </odoo>

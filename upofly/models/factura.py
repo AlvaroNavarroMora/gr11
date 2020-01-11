@@ -17,4 +17,5 @@ class factura(models.Model):
          
      @api.depends('subtotal', 'iva')
      def _importe_total(self):
-         self.importeTotal = float(self.subtotal) + (float(self.subtotal) * (float(self.iva))/100)
+         for record in self:
+             record.importeTotal = float(record.subtotal) + (float(record.subtotal) * (float(record.iva))/100)

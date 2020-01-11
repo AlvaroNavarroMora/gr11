@@ -1,0 +1,38 @@
+
+<odoo>
+
+	<data noupdate="1">
+		<!-- CLIENTES -->
+		<record id="cliente0" model="upofly.cliente">
+			<field name="name">Raquel</field>
+			<!-- <field name="partner_id">20</field> -->
+			<field name="identificacion">82481884C</field>
+			<field name="phone">654987845</field>
+		</record>
+		<record id="cliente1" model="upofly.cliente">
+			<field name="name">Marmita</field>
+			<!-- <field name="partner_id">20</field> -->
+			<field name="identificacion">97812234L</field>
+			<field name="phone">654667666</field>
+		</record>
+		<!-- PILOTOS -->
+		<record id="piloto0" model="upofly.piloto">
+			<field name="nombre">Gary oldad</field>
+			<field name="num_licencia">Marmita</field>
+			<field name="dni">74839484Z</field>
+		</record>
+		<record id="piloto1" model="upofly.piloto">
+			<field name="nombre">Odonis</field>
+			<field name="num_licencia">Marmita</field>
+			<field name="dni">23456454L</field>
+		</record>
+		<record id="piloto2" model="upofly.piloto">
+			<field name="nombre">Borja</field>
+			<field name="num_licencia">Marmita</field>
+			<field name="dni">12237825P</field>
+		</record>
+		<!-- VUELOS -->
+		
+	</data>
+
+</odoo>

@@ -1,0 +1,60 @@
+
+<odoo>
+
+	<data noupdate="1">
+		<!-- AERONAVES -->
+		<record id="nave0" model="upofly.aeronave">
+			<field name="modelo">TZX</field>
+			<field name="capacidad">10</field>
+			<field name="matricula">EC-LKX</field>
+		</record>
+		<record id="nave1" model="upofly.aeronave">
+			<field name="modelo">SSDA</field>
+			<field name="capacidad">20</field>
+			<field name="matricula">EC-KKK</field>
+		</record>
+		<!-- LOCALIZACIONES -->
+		<record id="loc0" model="upofly.localizacion">
+			<field name="ubicacion">Sevilla</field>
+			<field name="latitud">37.387744</field>
+			<field name="longitud">-5.983985</field>
+		</record>
+		<record id="loc1" model="upofly.localizacion">
+			<field name="ubicacion">Utrera</field>
+			<field name="latitud">37.181180</field>
+			<field name="longitud">-5.783782</field>
+		</record>
+		<record id="loc2" model="upofly.localizacion">
+			<field name="ubicacion">Cadiz</field>
+			<field name="latitud">36.526728</field>
+			<field name="longitud">-6.287961</field>
+		</record>
+		<record id="loc3" model="upofly.localizacion">
+			<field name="ubicacion">Dos hermanas</field>
+			<field name="latitud">37.287212</field>
+			<field name="longitud">-5.923754</field>
+		</record>
+		<!-- RUTAS -->
+		<record id="ruta0" model="upofly.ruta">
+			<field name="nombre">A la playa</field>
+			<field name="descripcion">Comenzamos en Utrera, vamos volando por el campo y
+				disfrutando de las vistas hasta llegar a Cádiz, donde podremos
+				disfrutar de volar sobre el oceano.
+			</field>
+			<field name="localizacion_ids"
+				eval="[([ref('loc1')],[ref('loc2')])]" />
+		</record>
+		<record id="ruta1" model="upofly.ruta">
+			<field name="nombre">La gran ciudad</field>
+			<field name="descripcion">
+				Salimos desde Utrera y disfrutamos de los mejores paisajes de Dos Hermanas, luego vamos a Sevilla, aterrizamos en el helipuerto del Cortinglés y nos tomamos un suculento desayuno.
+			</field>
+			<field name="localizacion_ids"
+				eval="[([ref('loc1')],[ref('loc3')],[ref('loc0')])]" />
+		</record>
+		<!-- PARTES MANTENIMIENTO -->
+		
+		<!-- SERVICIOS -->
+	</data>
+
+</odoo>

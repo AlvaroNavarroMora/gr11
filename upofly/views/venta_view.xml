@@ -28,12 +28,25 @@
 				</tree>
 			</field>
 		</record>
+		
+		
+		<record id="upofly_graph_tree_view" model="ir.ui.view">
+			<field name="name">upofly_venta_graph_view</field>
+			<field name="model">upofly.venta</field>
+			<field name="arch" type="xml">
+				<graph string="Número de ventas por cliente">
+					<field name="cliente_id" type="row"/>
+					<field name="total_aux" type="col"/>
+				</graph>
+			</field>
+		</record>
+		
 
 		<record id="act_venta" model="ir.actions.act_window">
 			<field name="name">Ventas</field>
 			<field name="res_model">upofly.venta</field>
 			<field name="view_type">form</field>
-			<field name="view_mode">tree,form</field>
+			<field name="view_mode">tree,form,graph</field>
 		</record>
 
 		<menuitem id="ventas_submenu" parent="upofly" name="Ventas"

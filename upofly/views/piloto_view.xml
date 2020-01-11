@@ -43,6 +43,13 @@
 				</tree>
 			</field>
 		</record>
+		
+		
+
+		
+		
+		
+		
 		<record model="ir.ui.view" id="piloto_kanban_view">
 			<field name='name'>piloto_kanban_view</field>
 			<field name="model">upofly.piloto</field>
@@ -75,12 +82,19 @@
 				</kanban>
 			</field>
 		</record>
+		
+		
+		
 		<record id="act_pilotos" model="ir.actions.act_window">
 			<field name="name">Gestión de Pilotos</field>
 			<field name="res_model">upofly.piloto</field>
 			<field name="view_mode">tree,form,kanban</field>
 			<field name="search_view_id" ref="pilotos_view_search" />
 		</record>
+		
+		
+		
+		
 		<menuitem name="Pilotos" id="pilotos_submenu" parent="upofly"
 			sequence="101" action="act_pilotos" />
 		<menuitem name="Ver Pilotos" id="pilotos_submenu_2"

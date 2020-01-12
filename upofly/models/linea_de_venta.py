@@ -6,10 +6,10 @@ class linea_de_venta(models.Model):
     _name = 'upofly.linea_de_venta'
     _rec_name = 'num_horas'
     
-    num_horas = fields.Float("Número de horas")
+    num_horas = fields.Float("Número de horas", required=True)
     venta_id = fields.Many2one("upofly.venta", "Venta")
-    servicio_ids = fields.Many2one("upofly.servicio", "Servicios")
-    vuelo_id = fields.Many2one("upofly.vuelo", "Vuelo")
+    servicio_ids = fields.Many2one("upofly.servicio", "Servicio", required=True)
+    vuelo_id = fields.Many2one("upofly.vuelo", "Vuelo", required=True)
     
     
     subtotal = fields.Float("Subtotal", store=True, compute="_calcular_subtotal")

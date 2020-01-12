@@ -4,10 +4,11 @@ from odoo import models, fields, api
 
 class venta(models.Model):
     _name = 'upofly.venta'
-    _rec_name = 'total'
     
     factura_id = fields.Many2one("upofly.factura", "Factura")
-    cliente_id = fields.Many2one("upofly.cliente", "Cliente")
+    cliente_id = fields.Many2one("upofly.cliente", "Cliente", required=True)
+    fecha = fields.Date("Fecha", required=True)
+    observaciones = fields.Text("Observaciones")
     lineas_de_venta_ids = fields.One2many("upofly.linea_de_venta", "venta_id", string="Líneas de Venta")
     total = fields.Float("Total sin IVA", compute="_calcular_precio")
     total_aux = fields.Float("Preco total", compute="_calcular_precio_aux", store=True)

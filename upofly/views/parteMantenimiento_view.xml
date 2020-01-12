@@ -29,13 +29,6 @@
 			<field name="type">form</field>
 			<field name="arch" type="xml">
 				<form>
-					<group string="Partes de Mantenimiento">
-						<field name="aeronave_id" />
-						<field name="fecha" />
-						<field name="descripcion" />
-						<field name="state" />
-						<field name="tiempoEstimado" />
-					</group>
 					<header>
 						<button name="btn_submit_to_reparacion" string="Reparar"
 							type="object" class="oe_highlight" states="espera" />
@@ -43,6 +36,14 @@
 							type="object" class="oe_highlight" states="reparacion" />
 						<field name='state' widget='statusbar' clickable='True' />
 					</header>
+					<sheet>
+						<group string="Partes de Mantenimiento">
+							<field name="aeronave_id" />
+							<field name="fecha" />
+							<field name="descripcion" />
+							<field name="tiempoEstimado" />
+						</group>
+					</sheet>
 				</form>
 			</field>
 		</record>
@@ -76,13 +77,23 @@
 			</field>
 		</record>
 
+		<record id="upofly_parteMantenimiento_graph_view"
+			model="ir.ui.view">
+			<field name="name">upofly_parteMantenimiento_graph_view</field>
+			<field name="model">upofly.parte_mantenimiento</field>
+			<field name="arch" type="xml">
+				<graph string="Estados del parque de aeronaves" type="pie">
+					<field name="state" type="row" />
+				</graph>
+			</field>
+		</record>
 
 		<record id="act_parteMantenimiento"
 			model="ir.actions.act_window">
 			<field name="name">Partes de Mantenimiento</field>
 			<field name="res_model">upofly.parte_mantenimiento</field>
 			<field name="view_type">form</field>
-			<field name="view_mode">tree,form,calendar</field>
+			<field name="view_mode">tree,form,calendar,graph</field>
 		</record>
 
 		<menuitem name="Partes de Mantenimiento"

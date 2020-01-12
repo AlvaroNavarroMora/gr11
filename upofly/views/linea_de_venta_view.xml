@@ -8,10 +8,9 @@
 				<form>
 					<group string="Linea de Venta">
 						<field name="num_horas" />
-						<field name="venta_id" />
 						<field name="servicio_ids" />
-						<field name="subtotal" />
 						<field name="vuelo_id" />
+						<field name="subtotal" />
 					</group>
 				</form>
 			</field>
@@ -23,7 +22,6 @@
 			<field name="arch" type="xml">
 				<tree string="tree_string">
 					<field name="num_horas" />
-					<field name="venta_id" />
 					<field name="servicio_ids" />
 					<field name="subtotal" />
 					<field name="vuelo_id" />
@@ -38,10 +36,6 @@
 			<field name="view_mode">tree,form</field>
 		</record>
 
-
-
-		<menuitem id="linea_de_venta_submenu" parent="ventas_submenu"
-			name="Líneas de Venta" action="act_linea_de_venta" sequence="110" />
 	</data>
 
 </odoo>

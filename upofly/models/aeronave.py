@@ -12,3 +12,5 @@ class aeronave(models.Model):
     parte_mantenimiento_ids = fields.One2many("upofly.parte_mantenimiento", "aeronave_id", string="Partes de Mantenimiento")
     vuelo_ids = fields.One2many('upofly.vuelo',"aeronave_id", string="Vuelos")
     es_helicoptero = fields.Boolean("Helicóptero")
+
+    _sql_constraints = [('aeronave_matricula_unique','UNIQUE (matricula)','La matrícula debe ser única')]

@@ -6,7 +6,7 @@
 			<field name="model">upofly.localizacion</field>
 			<field name="arch" type="xml">
 				<form>
-					<group string="localizacion">
+					<group string="Localización">
 						<field name="ubicacion" />
 						<field name="latitud" />
 						<field name="longitud" />

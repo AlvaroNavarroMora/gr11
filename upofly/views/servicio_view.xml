@@ -36,8 +36,6 @@
 			<field name="view_mode">tree,form</field>
 		</record>
 
-
-
 		<menuitem id="servicio_submenu" parent="ventas_submenu"
 			name="Servicios" action="act_servicio" sequence="190" />
 	</data>

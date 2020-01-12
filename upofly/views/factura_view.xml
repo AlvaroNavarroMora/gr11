@@ -1,41 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 	<data>
-		<record model="ir.ui.view" id="upofly_factura_form">
-			<field name="name">Factura</field>
+		<record id="factura_view_search" model="ir.ui.view">
+			<field name="name">upofly.factura.search</field>
 			<field name="model">upofly.factura</field>
 			<field name="arch" type="xml">
-				<form string="Form de factura">
-					<group string="Factura">
-						<field name="identificador" />
-						<field name="concepto" />
-						<field name="descripcion" />
-						<field name="fecha" />
-						<field name="subtotal" />
-						<field name="iva" />
-						<field name="importeTotal" />
-						<field name="venta_id" />
-					</group>
-				</form>
+				<search string="Buscar">
+					<filter name='borradores' string="Borradores"
+						domain="[('state','=','borrador')]" />
+					<filter name='pendientes' string="Pendientes de cobro"
+						domain="[('state','=','pendiente')]" />
+					<filter name='cobradas' string="Cobradas"
+						domain="[('state','=','cobrada')]" />
+				</search>
 			</field>
 		</record>
-
 		<record model="ir.ui.view" id="view_upofly_factura_form">
 			<field name="name">view_upofly_factura_form</field>
 			<field name="model">upofly.factura</field>
 			<field name="type">form</field>
 			<field name="arch" type="xml">
 				<form string="Factura">
-					<group string="Factura">
-						<field name="identificador" />
-						<field name="concepto" />
-						<field name="descripcion" />
-						<field name="fecha" />
-						<field name="subtotal" />
-						<field name="iva" />
-						<field name="importeTotal" />
-						<field name="venta_id" />
-					</group>
+					<header>
+						<button name="btn_submit_to_pendiente" string="Formalizar"
+							type="object" class="oe_highlight" states="borrador" />
+						<button name="btn_submit_to_cobrada" string="Cobrar"
+							type="object" class="oe_highlight" states="pendiente" />
+						<field name='state' widget='statusbar' clickable='True' />
+					</header>
+					<sheet>
+						<group string="Factura">
+							<field name="id" />
+							<field name="concepto" />
+							<field name="descripcion" />
+							<field name="fecha" />
+							<field name="subtotal" />
+							<field name="iva" />
+							<field name="importeTotal" />
+							<field name="venta_id" />
+						</group>
+					</sheet>
 				</form>
 			</field>
 		</record>
@@ -45,10 +49,11 @@
 			<field name="model">upofly.factura</field>
 			<field name="arch" type="xml">
 				<tree string="tree_string">
-					<field name="identificador" />
+					<field name="id" />
 					<field name="concepto" />
 					<field name="importeTotal" />
 					<field name="venta_id" />
+					<field name="state" />
 				</tree>
 			</field>
 		</record>

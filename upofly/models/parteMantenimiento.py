@@ -8,11 +8,10 @@ class parteMantenimiento(models.Model):
     
     fecha = fields.Date("Fecha", required=True)
     descripcion = fields.Text("Descripcion")
-    #estado = fields.Selection([('espera', 'En espera'), ('reparacion', 'En reparacion'), ('reparado', 'Reparado')], 'Estado del mantenimiento')
     tiempoEstimado = fields.Integer("Tiempo Estimado de reparación (Horas)", required = True)
     aeronave_id = fields.Many2one("upofly.aeronave", "Aeronave")
     state = fields.Selection([('espera','En espera'),
-                          ('reparacion', 'En reparacion'),
+                          ('reparacion', 'En reparación'),
                           ('reparado', 'Reparado'),],
                           'Estado del mantenimiento',
                           default='espera')
@@ -24,8 +23,3 @@ class parteMantenimiento(models.Model):
     @api.one
     def btn_submit_to_reparado(self):
         self.write({'state':'reparado'})
-        
-    #@api.onchange('gymclass_ids')
-    #def onchange_gymclass(self):
-        #if self.state != 'reparado':
-            #raise models.ValidationError('El usuario debe estar admitido para apuntarlo a una clase')

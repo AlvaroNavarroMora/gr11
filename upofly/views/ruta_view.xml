@@ -11,10 +11,13 @@
 						<field name="descripcion" />
 						<field name="localizacion_ids" />
 					</group>
+					<newline></newline>
+					<button name="eliminarLocalizaciones"
+						string="Eliminar Localizaciones" type="object"></button>
 				</form>
 			</field>
 		</record>
-		
+
 		<record id="upofly_ruta_tree_view" model="ir.ui.view">
 			<field name="name">upofly_ruta_tree_view</field>
 			<field name="model">upofly.ruta</field>
@@ -34,7 +37,8 @@
 			<field name="view_mode">tree,form</field>
 		</record>
 
-		<menuitem id="vuelo_submenu" parent="upofly" name="Vuelo" sequence="100" />
+		<menuitem id="vuelo_submenu" parent="upofly" name="Vuelo"
+			sequence="100" />
 		<menuitem id="vuelo_submenu" parent="upofly" name="Vuelos"
 			sequence="100" />
 		<menuitem id="ruta_submenu" parent="vuelo_submenu"

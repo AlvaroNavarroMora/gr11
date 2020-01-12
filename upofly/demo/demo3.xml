@@ -5,15 +5,19 @@
 		<!-- VENTAS -->
 		<record id="venta0" model="upofly.venta">
 			<field name="cliente_id" ref="cliente0" />
+			<field name="fecha">09/01/2020</field>
 			</record>
 		<record id="venta1" model="upofly.venta">
 			<field name="cliente_id" ref="cliente0" />
+			<field name="fecha">17/11/2019</field>
 			</record>
 		<record id="venta2" model="upofly.venta">
 			<field name="cliente_id" ref="cliente1" />
+			<field name="fecha">12/12/2019</field>
 		</record>
 		<record id="venta3" model="upofly.venta">
 			<field name="cliente_id" ref="cliente1" />
+			<field name="fecha">19/12/2019</field>
 			
 		</record>
 		<!-- LINEA DE VENTA -->
